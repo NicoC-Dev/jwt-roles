@@ -1,0 +1,25 @@
+meta {
+  name: autenticar
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:5111/Api/Auth/login
+  body: json
+  auth: bearer
+}
+
+body:json {
+  {
+    "email": "string@gmail.com",
+    "contrasena": "string"
+  }
+}
+
+tests {
+  {
+      "email": "nicolas@gmail.com",
+      "contrasena": "string"
+  }
+}
